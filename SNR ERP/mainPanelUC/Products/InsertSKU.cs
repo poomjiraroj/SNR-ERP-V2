@@ -67,6 +67,9 @@ namespace SNR_ERP
                 case 3:
                     ChooseColorVinyl();
                     break;
+                case 4:
+                    ChooseSKUPrice();
+                    break;
             }
         }
 
@@ -166,7 +169,7 @@ namespace SNR_ERP
 
         public void setSKU()
         {
-            SKU = SKUP.getSKU();
+            SKU = (SKUP.getSKU()).ToUpper();
             Cost = SKUP.getCost();
             WholeSale = SKUP.getWholeSale();
             Price = SKUP.getPrice();
@@ -178,7 +181,14 @@ namespace SNR_ERP
                     {
                         if(Price!=0)
                         {
-
+                            lbiCost.Text = "ราคาทุน";
+                            lbiWhole.Text = "ราคาส่ง";
+                            lbiPrice.Text = "ราคาขาย";
+                            lbSKU.Text = "SKU : " + SKU;
+                            lbCost.Text = Cost.ToString();
+                            lbWhole.Text = WholeSale.ToString();
+                            lbPrice.Text = Price.ToString();
+                            ChooseWarehouse();
                         }
                         else
                         {
@@ -203,6 +213,12 @@ namespace SNR_ERP
                 MD = new MessageDialog("กรุณาใส่ SKU");
                 MD.ShowDialog();
             }
+        }
+
+        public void ChooseWarehouse()
+        {
+            intPage = 4;
+            insertSKUPanel.Controls.Clear();
         }
     }
 }
