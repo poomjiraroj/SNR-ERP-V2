@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SNR_ERP
@@ -37,7 +31,7 @@ namespace SNR_ERP
             mainPanel.Controls.Clear();
             pd.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(pd);
-            lbHome.Font = new Font("Segoe UI", 15,FontStyle.Regular);
+            lbHome.Font = new Font("Segoe UI", 15, FontStyle.Regular);
             lbProducts.Font = new Font("Segoe UI", 15, FontStyle.Bold);
             lbOrders.Font = new Font("Segoe UI", 15, FontStyle.Regular);
             lbSetting.Font = new Font("Segoe UI", 15, FontStyle.Regular);
