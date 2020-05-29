@@ -94,6 +94,12 @@
     <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\ChooseVehicle.Designer.cs">
       <DependentUpon>ChooseVehicle.cs</DependentUpon>
     </Compile>
+    <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\ChooseWarehouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\ChooseWarehouse.Designer.cs">
+      <DependentUpon>ChooseWarehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\SKUandPrice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mainPanelUC\Products\InsertSKUPanelUC\ChooseVehicle.resx">
       <DependentUpon>ChooseVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainPanelUC\Products\InsertSKUPanelUC\ChooseWarehouse.resx">
+      <DependentUpon>ChooseWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainPanelUC\Products\InsertSKUPanelUC\SKUandPrice.resx">
       <DependentUpon>SKUandPrice.cs</DependentUpon>

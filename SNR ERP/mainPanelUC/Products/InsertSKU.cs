@@ -17,6 +17,7 @@ namespace SNR_ERP
         ChooseVehicle cv= new ChooseVehicle();
         ChooseColorVinyl cc = new ChooseColorVinyl();
         SKUandPrice SKUP = new SKUandPrice();
+        ChooseWarehouse cw = new ChooseWarehouse();
 
         String BrandName;
         String SeriesName;
@@ -219,6 +220,9 @@ namespace SNR_ERP
         {
             intPage = 4;
             insertSKUPanel.Controls.Clear();
+            insertSKUPanel.Controls.Clear();
+            cw.Dock = DockStyle.Fill;
+            insertSKUPanel.Controls.Add(cw);
         }
     }
 }
