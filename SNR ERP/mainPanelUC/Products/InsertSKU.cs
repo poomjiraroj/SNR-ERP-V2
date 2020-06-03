@@ -34,12 +34,16 @@ namespace SNR_ERP
         Double WholeSale;
         Double Price;
 
+        String CompanyID;
+        String WarehouseID;
+
         MessageDialog MD;
 
         int intPage = 0;
         public InsertSKU()
         {
             InitializeComponent();
+            btnConfirm.Visible = false;
             chooseVehicle();
         }
 
@@ -54,6 +58,9 @@ namespace SNR_ERP
                     break;
 
                 case 3: setSKU();
+                    break;
+
+                case 4: setWarehouse();
                     break;
             }
         }
@@ -162,6 +169,7 @@ namespace SNR_ERP
         }
         public void ChooseSKUPrice()
         {
+            btnConfirm.Visible = false;
             intPage = 3;
             insertSKUPanel.Controls.Clear();
             SKUP.Dock = DockStyle.Fill;
@@ -218,11 +226,22 @@ namespace SNR_ERP
 
         public void ChooseWarehouse()
         {
+            btnNext.Visible = true;
             intPage = 4;
             insertSKUPanel.Controls.Clear();
             insertSKUPanel.Controls.Clear();
             cw.Dock = DockStyle.Fill;
             insertSKUPanel.Controls.Add(cw);
+        }
+
+        public void setWarehouse()
+        {
+            btnConfirm.Visible = true;
+            btnNext.Visible = false;
+            CompanyID = cw.getCompanyID();
+            lbCompany.Text = "โรงงาน : " + cw.getCompany();
+            WarehouseID = cw.getWarehouseID();
+            lbWarehouse.Text = "คลังสินค้า : " + cw.getWarehouse();
         }
     }
 }
