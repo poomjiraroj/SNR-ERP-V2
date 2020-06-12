@@ -33,7 +33,7 @@ namespace SNR_ERP.mainPanelUC.Products.InsertSKUPanelUC
         public ChooseVehicle() 
         {
             InitializeComponent();
-            String SQL = "Data Source=JISURFACE;Initial Catalog=SNRWareHouseData;Integrated Security=True";
+            String SQL = "Server=tcp:jiserver.database.windows.net,1433;Initial Catalog=SNRWareHouseData;Persist Security Info=False;User ID=poom_jiraroj;Password=@Minimalism2020;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             Conn = new SqlConnection(SQL);
             setCombobox();
         }
