@@ -53,9 +53,12 @@
             this.lbIntroPiece = new System.Windows.Forms.Label();
             this.lbIntroPieceVi = new System.Windows.Forms.Label();
             this.lbPieceVi = new System.Windows.Forms.Label();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.lbSKU = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbQuan = new System.Windows.Forms.Label();
+            this.lbiQuan = new System.Windows.Forms.Label();
             this.lbCost = new System.Windows.Forms.Label();
             this.lbiCost = new System.Windows.Forms.Label();
             this.lbiWhole = new System.Windows.Forms.Label();
@@ -63,9 +66,8 @@
             this.lbiPrice = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbCompany = new System.Windows.Forms.Label();
             this.lbWarehouse = new System.Windows.Forms.Label();
-            this.btnConfirm = new System.Windows.Forms.Button();
+            this.lbCompany = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -247,9 +249,9 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel8, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel10, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.btnConfirm, 0, 5);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel8, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel10, 0, 2);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Font = new System.Drawing.Font("Sukhumvit Set", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 62);
@@ -257,9 +259,9 @@
             this.tableLayoutPanel5.RowCount = 6;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(408, 533);
             this.tableLayoutPanel5.TabIndex = 1;
@@ -415,156 +417,6 @@
             this.lbPieceVi.TabIndex = 5;
             this.lbPieceVi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.ColumnCount = 1;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Controls.Add(this.lbSKU, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 1);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 161);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 2;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(402, 100);
-            this.tableLayoutPanel8.TabIndex = 2;
-            // 
-            // lbSKU
-            // 
-            this.lbSKU.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbSKU.AutoSize = true;
-            this.lbSKU.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
-            this.lbSKU.Location = new System.Drawing.Point(3, 0);
-            this.lbSKU.Name = "lbSKU";
-            this.lbSKU.Size = new System.Drawing.Size(396, 40);
-            this.lbSKU.TabIndex = 1;
-            this.lbSKU.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 4;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel9.Controls.Add(this.lbCost, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.lbiCost, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.lbiWhole, 1, 0);
-            this.tableLayoutPanel9.Controls.Add(this.lbWhole, 1, 1);
-            this.tableLayoutPanel9.Controls.Add(this.lbiPrice, 2, 0);
-            this.tableLayoutPanel9.Controls.Add(this.lbPrice, 2, 1);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 43);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(396, 54);
-            this.tableLayoutPanel9.TabIndex = 2;
-            // 
-            // lbCost
-            // 
-            this.lbCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbCost.AutoSize = true;
-            this.lbCost.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
-            this.lbCost.Location = new System.Drawing.Point(3, 29);
-            this.lbCost.Name = "lbCost";
-            this.lbCost.Size = new System.Drawing.Size(112, 23);
-            this.lbCost.TabIndex = 0;
-            this.lbCost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbiCost
-            // 
-            this.lbiCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbiCost.AutoSize = true;
-            this.lbiCost.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
-            this.lbiCost.Location = new System.Drawing.Point(3, 2);
-            this.lbiCost.Name = "lbiCost";
-            this.lbiCost.Size = new System.Drawing.Size(112, 23);
-            this.lbiCost.TabIndex = 3;
-            this.lbiCost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbiWhole
-            // 
-            this.lbiWhole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbiWhole.AutoSize = true;
-            this.lbiWhole.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
-            this.lbiWhole.Location = new System.Drawing.Point(121, 2);
-            this.lbiWhole.Name = "lbiWhole";
-            this.lbiWhole.Size = new System.Drawing.Size(112, 23);
-            this.lbiWhole.TabIndex = 4;
-            this.lbiWhole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbWhole
-            // 
-            this.lbWhole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbWhole.AutoSize = true;
-            this.lbWhole.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
-            this.lbWhole.Location = new System.Drawing.Point(121, 29);
-            this.lbWhole.Name = "lbWhole";
-            this.lbWhole.Size = new System.Drawing.Size(112, 23);
-            this.lbWhole.TabIndex = 1;
-            this.lbWhole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbiPrice
-            // 
-            this.lbiPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbiPrice.AutoSize = true;
-            this.lbiPrice.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
-            this.lbiPrice.Location = new System.Drawing.Point(239, 2);
-            this.lbiPrice.Name = "lbiPrice";
-            this.lbiPrice.Size = new System.Drawing.Size(112, 23);
-            this.lbiPrice.TabIndex = 5;
-            this.lbiPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbPrice.AutoSize = true;
-            this.lbPrice.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
-            this.lbPrice.Location = new System.Drawing.Point(239, 29);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(112, 23);
-            this.lbPrice.TabIndex = 2;
-            this.lbPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tableLayoutPanel10
-            // 
-            this.tableLayoutPanel10.ColumnCount = 1;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Controls.Add(this.lbWarehouse, 0, 1);
-            this.tableLayoutPanel10.Controls.Add(this.lbCompany, 0, 0);
-            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 267);
-            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 2;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(402, 73);
-            this.tableLayoutPanel10.TabIndex = 3;
-            // 
-            // lbCompany
-            // 
-            this.lbCompany.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbCompany.AutoSize = true;
-            this.lbCompany.Location = new System.Drawing.Point(3, 4);
-            this.lbCompany.Name = "lbCompany";
-            this.lbCompany.Size = new System.Drawing.Size(0, 27);
-            this.lbCompany.TabIndex = 0;
-            // 
-            // lbWarehouse
-            // 
-            this.lbWarehouse.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbWarehouse.AutoSize = true;
-            this.lbWarehouse.Location = new System.Drawing.Point(3, 41);
-            this.lbWarehouse.Name = "lbWarehouse";
-            this.lbWarehouse.Size = new System.Drawing.Size(0, 27);
-            this.lbWarehouse.TabIndex = 1;
-            // 
             // btnConfirm
             // 
             this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -579,6 +431,181 @@
             this.btnConfirm.TabIndex = 4;
             this.btnConfirm.Text = "ยืนยัน";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 1;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.Controls.Add(this.lbSKU, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 1);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 240);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 2;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(402, 127);
+            this.tableLayoutPanel8.TabIndex = 2;
+            // 
+            // lbSKU
+            // 
+            this.lbSKU.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbSKU.AutoSize = true;
+            this.lbSKU.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
+            this.lbSKU.Location = new System.Drawing.Point(3, 0);
+            this.lbSKU.Name = "lbSKU";
+            this.lbSKU.Size = new System.Drawing.Size(396, 50);
+            this.lbSKU.TabIndex = 1;
+            this.lbSKU.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 4;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel9.Controls.Add(this.lbQuan, 3, 1);
+            this.tableLayoutPanel9.Controls.Add(this.lbiQuan, 3, 0);
+            this.tableLayoutPanel9.Controls.Add(this.lbCost, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.lbiCost, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.lbiWhole, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.lbWhole, 1, 1);
+            this.tableLayoutPanel9.Controls.Add(this.lbiPrice, 2, 0);
+            this.tableLayoutPanel9.Controls.Add(this.lbPrice, 2, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 53);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(396, 71);
+            this.tableLayoutPanel9.TabIndex = 2;
+            // 
+            // lbQuan
+            // 
+            this.lbQuan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbQuan.AutoSize = true;
+            this.lbQuan.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
+            this.lbQuan.Location = new System.Drawing.Point(300, 41);
+            this.lbQuan.Name = "lbQuan";
+            this.lbQuan.Size = new System.Drawing.Size(93, 23);
+            this.lbQuan.TabIndex = 5;
+            this.lbQuan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbiQuan
+            // 
+            this.lbiQuan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbiQuan.AutoSize = true;
+            this.lbiQuan.Font = new System.Drawing.Font("Sukhumvit Set", 10F);
+            this.lbiQuan.Location = new System.Drawing.Point(300, 5);
+            this.lbiQuan.Name = "lbiQuan";
+            this.lbiQuan.Size = new System.Drawing.Size(93, 25);
+            this.lbiQuan.TabIndex = 6;
+            this.lbiQuan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbCost
+            // 
+            this.lbCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbCost.AutoSize = true;
+            this.lbCost.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
+            this.lbCost.Location = new System.Drawing.Point(3, 41);
+            this.lbCost.Name = "lbCost";
+            this.lbCost.Size = new System.Drawing.Size(93, 23);
+            this.lbCost.TabIndex = 0;
+            this.lbCost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbiCost
+            // 
+            this.lbiCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbiCost.AutoSize = true;
+            this.lbiCost.Font = new System.Drawing.Font("Sukhumvit Set", 10F);
+            this.lbiCost.Location = new System.Drawing.Point(3, 5);
+            this.lbiCost.Name = "lbiCost";
+            this.lbiCost.Size = new System.Drawing.Size(93, 25);
+            this.lbiCost.TabIndex = 3;
+            this.lbiCost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbiWhole
+            // 
+            this.lbiWhole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbiWhole.AutoSize = true;
+            this.lbiWhole.Font = new System.Drawing.Font("Sukhumvit Set", 10F);
+            this.lbiWhole.Location = new System.Drawing.Point(102, 5);
+            this.lbiWhole.Name = "lbiWhole";
+            this.lbiWhole.Size = new System.Drawing.Size(93, 25);
+            this.lbiWhole.TabIndex = 4;
+            this.lbiWhole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbWhole
+            // 
+            this.lbWhole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbWhole.AutoSize = true;
+            this.lbWhole.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
+            this.lbWhole.Location = new System.Drawing.Point(102, 41);
+            this.lbWhole.Name = "lbWhole";
+            this.lbWhole.Size = new System.Drawing.Size(93, 23);
+            this.lbWhole.TabIndex = 1;
+            this.lbWhole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbiPrice
+            // 
+            this.lbiPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbiPrice.AutoSize = true;
+            this.lbiPrice.Font = new System.Drawing.Font("Sukhumvit Set", 10F);
+            this.lbiPrice.Location = new System.Drawing.Point(201, 5);
+            this.lbiPrice.Name = "lbiPrice";
+            this.lbiPrice.Size = new System.Drawing.Size(93, 25);
+            this.lbiPrice.TabIndex = 5;
+            this.lbiPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Sukhumvit Set", 10F, System.Drawing.FontStyle.Bold);
+            this.lbPrice.Location = new System.Drawing.Point(201, 41);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(93, 23);
+            this.lbPrice.TabIndex = 2;
+            this.lbPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 1;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel10.Controls.Add(this.lbWarehouse, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.lbCompany, 0, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 161);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(402, 73);
+            this.tableLayoutPanel10.TabIndex = 3;
+            // 
+            // lbWarehouse
+            // 
+            this.lbWarehouse.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbWarehouse.AutoSize = true;
+            this.lbWarehouse.Location = new System.Drawing.Point(3, 41);
+            this.lbWarehouse.Name = "lbWarehouse";
+            this.lbWarehouse.Size = new System.Drawing.Size(0, 27);
+            this.lbWarehouse.TabIndex = 1;
+            // 
+            // lbCompany
+            // 
+            this.lbCompany.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbCompany.AutoSize = true;
+            this.lbCompany.Location = new System.Drawing.Point(3, 4);
+            this.lbCompany.Name = "lbCompany";
+            this.lbCompany.Size = new System.Drawing.Size(0, 27);
+            this.lbCompany.TabIndex = 0;
             // 
             // InsertSKU
             // 
@@ -661,5 +688,7 @@
         private System.Windows.Forms.Label lbWarehouse;
         private System.Windows.Forms.Label lbCompany;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Label lbQuan;
+        private System.Windows.Forms.Label lbiQuan;
     }
 }

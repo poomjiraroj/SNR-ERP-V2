@@ -82,6 +82,25 @@
     <Compile Include="mainPanelUC\Products.Designer.cs">
       <DependentUpon>Products.cs</DependentUpon>
     </Compile>
+    <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\addVehicle\AddBrandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\addVehicle\AddBrandForm.Designer.cs">
+      <DependentUpon>AddBrandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\addVehicle\AddModelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\addVehicle\AddModelForm.Designer.cs">
+      <DependentUpon>AddModelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\addVehicle\AddSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\addVehicle\AddSeries.Designer.cs">
+      <DependentUpon>AddSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\addVehicle\AddVehicleClass.cs" />
     <Compile Include="mainPanelUC\Products\InsertSKUPanelUC\ChooseColorVinyl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,6 +145,15 @@
     <EmbeddedResource Include="mainPanelUC\Products.resx">
       <DependentUpon>Products.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="mainPanelUC\Products\InsertSKUPanelUC\addVehicle\AddBrandForm.resx">
+      <DependentUpon>AddBrandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainPanelUC\Products\InsertSKUPanelUC\addVehicle\AddModelForm.resx">
+      <DependentUpon>AddModelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainPanelUC\Products\InsertSKUPanelUC\addVehicle\AddSeries.resx">
+      <DependentUpon>AddSeries.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mainPanelUC\Products\InsertSKUPanelUC\ChooseColorVinyl.resx">
       <DependentUpon>ChooseColorVinyl.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,8 +188,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="mainPanelUC\Products\InsertSKUPanelUC\addVehicle\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,11 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SNR_ERP
 {
     public partial class InsertSKU : Form
     {
+        SqlCommand Cmd;
+        SqlConnection Conn;
+
         ChooseVehicle cv= new ChooseVehicle();
         ChooseColorVinyl cc = new ChooseColorVinyl();
         SKUandPrice SKUP = new SKUandPrice();
@@ -33,6 +37,8 @@ namespace SNR_ERP
         Double Cost;
         Double WholeSale;
         Double Price;
+        int Quantity;
+        String Remark;
 
         String CompanyID;
         String WarehouseID;
@@ -43,6 +49,8 @@ namespace SNR_ERP
         public InsertSKU()
         {
             InitializeComponent();
+            String SQL = "Data Source=JISURFACE;Initial Catalog=SNRWareHouseData;Integrated Security=True";
+            Conn = new SqlConnection(SQL);
             btnConfirm.Visible = false;
             chooseVehicle();
         }
@@ -57,10 +65,10 @@ namespace SNR_ERP
                 case 2: setColorVinyl();
                     break;
 
-                case 3: setSKU();
+                case 3: setWarehouse();
                     break;
 
-                case 4: setWarehouse();
+                case 4: setSKU();
                     break;
             }
         }
@@ -76,7 +84,7 @@ namespace SNR_ERP
                     ChooseColorVinyl();
                     break;
                 case 4:
-                    ChooseSKUPrice();
+                    ChooseWarehouse();
                     break;
             }
         }
@@ -140,7 +148,7 @@ namespace SNR_ERP
                         VNPiece = cc.getVinylPiece();
                         lbPieceVi.Text = VNPiece.ToString();
                         lbQVN.Text = "ชิ้น";
-                        ChooseSKUPrice();
+                        ChooseWarehouse();
                     }
                     else
                     {
@@ -150,11 +158,12 @@ namespace SNR_ERP
                 }
                 else
                 {
+                    VNPiece = 0;
                     lbVinyl.Text = "";
                     lbIntroPieceVi.Text = "";
                     lbPieceVi.Text = "";
                     lbQVN.Text = "";
-                    ChooseSKUPrice();
+                    ChooseWarehouse();
                 }
             }
             else
@@ -167,10 +176,32 @@ namespace SNR_ERP
                 MD.ShowDialog();
             }
         }
-        public void ChooseSKUPrice()
+        
+        public void ChooseWarehouse()
         {
+            btnNext.Visible = true;
             btnConfirm.Visible = false;
             intPage = 3;
+            insertSKUPanel.Controls.Clear();
+            insertSKUPanel.Controls.Clear();
+            cw.Dock = DockStyle.Fill;
+            insertSKUPanel.Controls.Add(cw);
+        }
+
+        public void setWarehouse()
+        {
+            CompanyID = cw.getCompanyID();
+            lbCompany.Text = "โรงงาน : " + cw.getCompany();
+            WarehouseID = cw.getWarehouseID();
+            lbWarehouse.Text = "คลังสินค้า : " + cw.getWarehouse();
+            ChooseSKUPrice();
+        }
+
+        public void ChooseSKUPrice()
+        {
+            intPage = 4;
+            btnNext.Visible = true;
+            btnConfirm.Visible = false;
             insertSKUPanel.Controls.Clear();
             SKUP.Dock = DockStyle.Fill;
             insertSKUPanel.Controls.Add(SKUP);
@@ -182,22 +213,37 @@ namespace SNR_ERP
             Cost = SKUP.getCost();
             WholeSale = SKUP.getWholeSale();
             Price = SKUP.getPrice();
-            if(SKU!="")
+            Quantity = SKUP.getQuantity();
+            Remark = SKUP.getRemark();
+
+            if (SKU != "")
             {
-                if(Cost!=0)
+                if (Cost != 0)
                 {
-                    if(WholeSale!=0)
+                    if (WholeSale != 0)
                     {
-                        if(Price!=0)
+                        if (Price != 0)
                         {
-                            lbiCost.Text = "ราคาทุน";
-                            lbiWhole.Text = "ราคาส่ง";
-                            lbiPrice.Text = "ราคาขาย";
-                            lbSKU.Text = "SKU : " + SKU;
-                            lbCost.Text = Cost.ToString();
-                            lbWhole.Text = WholeSale.ToString();
-                            lbPrice.Text = Price.ToString();
-                            ChooseWarehouse();
+                            if(Quantity!=0)
+                            {
+                                btnConfirm.Visible = true;
+                                btnNext.Visible = false;
+                                lbiCost.Text = "ราคาทุน";
+                                lbiWhole.Text = "ราคาส่ง";
+                                lbiPrice.Text = "ราคาขาย";
+                                lbSKU.Text = "SKU : " + SKU;
+                                lbCost.Text = Cost.ToString();
+                                lbWhole.Text = WholeSale.ToString();
+                                lbPrice.Text = Price.ToString();
+                                lbiQuan.Text = "จำนวนชุด";
+                                lbQuan.Text = Quantity.ToString();
+
+                            }
+                            else
+                            {
+                                MD = new MessageDialog("กรุณาใส่จำนวนชุดให้ถูกต้อง");
+                                MD.ShowDialog();
+                            }
                         }
                         else
                         {
@@ -224,24 +270,36 @@ namespace SNR_ERP
             }
         }
 
-        public void ChooseWarehouse()
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
-            btnNext.Visible = true;
-            intPage = 4;
-            insertSKUPanel.Controls.Clear();
-            insertSKUPanel.Controls.Clear();
-            cw.Dock = DockStyle.Fill;
-            insertSKUPanel.Controls.Add(cw);
-        }
-
-        public void setWarehouse()
-        {
-            btnConfirm.Visible = true;
-            btnNext.Visible = false;
-            CompanyID = cw.getCompanyID();
-            lbCompany.Text = "โรงงาน : " + cw.getCompany();
-            WarehouseID = cw.getWarehouseID();
-            lbWarehouse.Text = "คลังสินค้า : " + cw.getWarehouse();
+            Conn.Open();
+            Cmd = new SqlCommand("insertSKU", Conn);
+            Cmd.Parameters.Add(new SqlParameter("@SKU", SKU));
+            Cmd.Parameters.Add(new SqlParameter("@ColorID", ColorID));
+            Cmd.Parameters.Add(new SqlParameter("@VNID", VNID));
+            Cmd.Parameters.Add(new SqlParameter("@Piece", Piece));
+            Cmd.Parameters.Add(new SqlParameter("@VinylPiece", VNPiece));
+            Cmd.Parameters.Add(new SqlParameter("@Quantity", Quantity));
+            Cmd.Parameters.Add(new SqlParameter("@ModelID", ModelID));
+            Cmd.Parameters.Add(new SqlParameter("@ProductID", "PD11111"));
+            Cmd.Parameters.Add(new SqlParameter("@CompanyID", CompanyID));
+            Cmd.Parameters.Add(new SqlParameter("@WarehouseID", WarehouseID));
+            Cmd.Parameters.Add(new SqlParameter("@Remark", Remark));
+            Cmd.Parameters.Add(new SqlParameter("@Cost", Cost));
+            Cmd.Parameters.Add(new SqlParameter("@Wholesale", WholeSale));
+            Cmd.Parameters.Add(new SqlParameter("@Price", Price));
+            Cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                Cmd.ExecuteNonQuery();
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MD = new MessageDialog("บันทึกข้อมูลไม่สำเร็จ กรุณาแก้ไขข้อมูล");
+                MD.ShowDialog();
+            }
+            Conn.Close();
         }
     }
 }

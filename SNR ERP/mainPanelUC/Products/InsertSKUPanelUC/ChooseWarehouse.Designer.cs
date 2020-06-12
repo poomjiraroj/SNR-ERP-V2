@@ -71,7 +71,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(478, 116);
             this.label1.TabIndex = 1;
-            this.label1.Text = "4. เลือกคลังสินค้าและโรงงาน";
+            this.label1.Text = "3. เลือกคลังสินค้าและโรงงาน";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2

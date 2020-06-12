@@ -64,5 +64,22 @@ namespace SNR_ERP.mainPanelUC.Products.InsertSKUPanelUC
                 return 0;
             }
         }
+
+        public int getQuantity()
+        {
+            try
+            {
+                return Convert.ToInt32(txtQuantity.Text);
+            }
+            catch(Exception ex)
+            {
+                return 0;
+            }
+        }
+
+        public String getRemark()
+        {
+            return txtRemark.Text;
+        }
     }
 }

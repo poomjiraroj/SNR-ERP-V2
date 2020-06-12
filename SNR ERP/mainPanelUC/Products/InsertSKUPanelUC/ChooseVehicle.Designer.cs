@@ -262,7 +262,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.ComboBox cbBrand;
+        public System.Windows.Forms.ComboBox cbBrand;
         private System.Windows.Forms.Button btnAddBrand;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

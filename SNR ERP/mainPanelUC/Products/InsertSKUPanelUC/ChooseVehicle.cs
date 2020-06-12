@@ -9,11 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Reflection;
+using SNR_ERP.mainPanelUC.Products.InsertSKUPanelUC.addVehicle;
 
 namespace SNR_ERP.mainPanelUC.Products.InsertSKUPanelUC
 {
     public partial class ChooseVehicle : UserControl
     {
+        AddBrandForm AddBF = new AddBrandForm();
+        AddSeries adSe;
+        AddModelForm AddMF;
+
         SqlCommand Cmd;
         SqlConnection Conn;
         SqlDataAdapter Da;
@@ -24,6 +29,7 @@ namespace SNR_ERP.mainPanelUC.Products.InsertSKUPanelUC
         String SeriesID;
         String SeriesName;
         int ModelSelect;
+
         public ChooseVehicle() 
         {
             InitializeComponent();
@@ -122,17 +128,36 @@ namespace SNR_ERP.mainPanelUC.Products.InsertSKUPanelUC
 
         private void btnAddBrand_Click(object sender, EventArgs e)
         {
-
+            AddBF.ShowDialog();
+            setCombobox();
         }
 
         private void btnAddSeries_Click(object sender, EventArgs e)
         {
+            try
+            {
+                adSe = new AddSeries(BrandID);
+                adSe.ShowDialog();
+            }
+            catch(Exception ex)
+            {
 
+            }
+            setCombobox();
         }
 
         private void btnAddModel_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AddMF = new AddModelForm(SeriesID);
+                AddMF.ShowDialog();
+            }
+            catch(Exception ex)
+            {
 
+            }
+            setCombobox();
         }
     }
 }
